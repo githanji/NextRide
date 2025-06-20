@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.clip-path-triangle {
+  clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 10% 100%);
+  overflow: hidden;
+}
+
