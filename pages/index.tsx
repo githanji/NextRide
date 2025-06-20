@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import styles from '@/styles/animations.module.css'; 
 import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 
@@ -21,7 +20,7 @@ import { Plus, Minus } from 'lucide-react';
 
 export default function Home() {
   
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const faqs = [
     {
@@ -47,9 +46,9 @@ export default function Home() {
     },
   ];
 
-  const toggle = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+  const toggle = (index: number) => {
+  setOpenIndex(openIndex === index ? null : index);
+   };
 
 
   return (
